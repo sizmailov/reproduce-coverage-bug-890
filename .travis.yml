@@ -71,7 +71,7 @@ matrix:
       before_install:
         - python --version
         - python -m pip install --upgrade pip virtualenv --user
-        - python -m virtualenv venv
+        - python -m virtualenv --python=python venv
         - source venv/bin/activate
     - name: "Python 3.6.5 on macOS 10.13"
       os: osx
@@ -80,7 +80,7 @@ matrix:
       before_install:
         - python3 --version
         - python3 -m pip install -U pip virtualenv  --user
-        - python -m virtualenv venv
+        - python3 -m virtualenv --python=python3 venv
         - source venv/bin/activate
 
 before_script:
