@@ -11,27 +11,22 @@ jobs:
       max-parallel: 4
       matrix:
         python-version: [2.7, 3.5, 3.6, 3.7]
-        runs-on: [ubuntu-latest, windows-latest, macos-latest]
+        runs-on: [ubuntu-latest, macos-latest]
 
     steps:
     - uses: actions/checkout@v1
-      if: always()
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-      if: always()
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-      if: always()
     - name: Run bug reproducer without coverage
       run: |
         python bug890.py
-      if: always()
     - name: Run bug reproducer with coverage 
       run: |
         coverage run bug890.py
-      if: always()
         
