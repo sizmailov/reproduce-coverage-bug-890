@@ -1,0 +1,21 @@
+language: python
+sudo: false
+
+os:
+  - linux
+  - osx
+
+python:
+  - "2.7"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.8-dev"
+  - "nightly"
+
+before_script:
+  - pip install -r requirements.txt
+script:
+  - python bug890.py        # run without coverage
+  - coverage run bug890.py  # run with coverage
