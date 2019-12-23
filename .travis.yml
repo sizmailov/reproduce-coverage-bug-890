@@ -64,13 +64,13 @@ matrix:
         - python -m virtualenv venv
         - source venv/bin/activate
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
-    - name: "Python 2.7.14 on macOS 10.13"
+    - name: "Python 2.7.14 on macOS 10.12"
       os: osx
       osx_image: xcode9.3
       language: shell
       before_install:
         - python --version
-        - python -m pip install --upgrade pip virtualenv
+        - python -m pip install --upgrade pip virtualenv --user
         - python -m virtualenv venv
         - source venv/bin/activate
     - name: "Python 3.6.5 on macOS 10.13"
@@ -79,7 +79,7 @@ matrix:
       language: shell  # 'language: python' is an error on Travis CI macOS
       before_install:
         - python3 --version
-        - python3 -m pip install -U pip virtualenv
+        - python3 -m pip install -U pip virtualenv  --user
         - python -m virtualenv venv
         - source venv/bin/activate
 
