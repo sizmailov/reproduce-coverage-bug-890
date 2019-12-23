@@ -1,21 +1,72 @@
 language: python
 sudo: false
 
-os:
-  - linux
-  - osx
+matrix:
+  include:
+    - name: "Python 2.7 on Linux"
+      - os: linux
+      - laguage: python
+      - python: 2.7
+    - name: "Python 3.4 on Linux"
+      - os: linux
+      - laguage: python
+      - python: 3.4
+    - name: "Python 3.5 on Linux"
+      - os: linux
+      - laguage: python
+      - python: 3.5
+    - name: "Python 3.6 on Linux"
+      - os: linux
+      - laguage: python
+      - python: 3.6
+    - name: "Python 3.7 on Linux"
+      - os: linux
+      - laguage: python
+      - python: 3.7
+    - name: "Python 3.8 on Linux"
+      - os: linux
+      - laguage: python
+      - python: 3.8
+    - name: "Python nightly on Linux"
+      - os: linux
+      - laguage: python
+      - python: nightly
+    - name: "Python 3.5.4 on Windows"
+        os: windows
+        language: shell
+        before_install:
+          - choco install python --version 3.5.4
+          - python --version
+          - python -m pip install --upgrade pip
+        env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
+    - name: "Python 3.6.8 on Windows"
+        os: windows
+        language: shell
+        before_install:
+          - choco install python --version 3.6.8
+          - python --version
+          - python -m pip install --upgrade pip
+        env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+    - name: "Python 3.7.6 on Windows"
+        os: windows
+        language: shell
+        before_install:
+          - choco install python --version 3.7.6
+          - python --version
+          - python -m pip install --upgrade pip
+        env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
+    - name: "Python 3.8.1 on Windows"
+        os: windows
+        language: shell
+        before_install:
+          - choco install python --version 3.8.1
+          - python --version
+          - python -m pip install --upgrade pip
+        env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 
-python:
-  - "2.7"
-  - "3.5"
-  - "3.6"
-  - "3.7"
-  - "3.8"
-  - "3.8-dev"
-  - "nightly"
 
 before_script:
-  - pip install -r requirements.txt
+  - python -m pip install -r requirements.txt
 script:
   - python bug890.py        # run without coverage
   - coverage run bug890.py  # run with coverage
