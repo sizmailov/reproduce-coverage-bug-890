@@ -24,46 +24,46 @@ matrix:
       os: linux
       language: python
       python: nightly
-    - name: "Python 3.5.4 on Windows"
-      os: windows
-      language: shell
-      before_install:
-        - choco install python --version 3.5.4
-        - python --version
-        - python -m pip install --upgrade pip virtualenv
-        - python -m virtualenv venv
-        - source venv/Scripts/activate
-      env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
-    - name: "Python 3.6.8 on Windows"
-      os: windows
-      language: shell
-      before_install:
-        - choco install python --version 3.6.8
-        - python --version
-        - python -m pip install --upgrade pip virtualenv
-        - python -m virtualenv venv
-        - source venv/Scripts/activate
-      env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
-    - name: "Python 3.7.6 on Windows"
-      os: windows
-      language: shell
-      before_install:
-        - choco install python --version 3.7.6
-        - python --version
-        - python -m pip install --upgrade pip virtualenv
-        - python -m virtualenv venv
-        - source venv/Scripts/activate
-      env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
-    - name: "Python 3.8.1 on Windows"
-      os: windows
-      language: shell
-      before_install:
-        - choco install python --version 3.8.1
-        - python --version
-        - python -m pip install --upgrade pip virtualenv
-        - python -m virtualenv venv
-        - source venv/Scripts/activate
-      env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
+#    - name: "Python 3.5.4 on Windows"
+#      os: windows
+#      language: shell
+#      before_install:
+#        - choco install python --version 3.5.4
+#        - python --version
+#        - python -m pip install --upgrade pip virtualenv
+#        - python -m virtualenv venv
+#        - source venv/Scripts/activate
+#      env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
+#    - name: "Python 3.6.8 on Windows"
+#      os: windows
+#      language: shell
+#      before_install:
+#        - choco install python --version 3.6.8
+#        - python --version
+#        - python -m pip install --upgrade pip virtualenv
+#        - python -m virtualenv venv
+#        - source venv/Scripts/activate
+#      env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+#    - name: "Python 3.7.6 on Windows"
+#      os: windows
+#      language: shell
+#      before_install:
+#        - choco install python --version 3.7.6
+#        - python --version
+#        - python -m pip install --upgrade pip virtualenv
+#        - python -m virtualenv venv
+#        - source venv/Scripts/activate
+#      env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
+#    - name: "Python 3.8.1 on Windows"
+#      os: windows
+#      language: shell
+#      before_install:
+#        - choco install python --version 3.8.1
+#        - python --version
+#        - python -m pip install --upgrade pip virtualenv
+#        - python -m virtualenv venv
+#        - source venv/Scripts/activate
+#      env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
     - name: "Python 2.7 on macOS 10.12"
       os: osx
       osx_image: xcode9.3
