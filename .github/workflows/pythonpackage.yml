@@ -25,8 +25,10 @@ jobs:
         pip install -r requirements.txt
     - name: Run bug reproducer without coverage
       run: |
-        python bug890.py || exit 0
+        python bug890.py
+      if: always()
     - name: Run bug reproducer with coverage 
       run: |
-        coverage run bug890.py || exit 0
+        coverage run bug890.py
+      if: always()
         
