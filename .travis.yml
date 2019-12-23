@@ -41,8 +41,8 @@ matrix:
         - choco install python --version 3.6.8
         - python --version
         - python -m pip install --upgrade pip virtualenv
-          - python -m virtualenv venv
-          - source venv/Scripts/activate
+        - python -m virtualenv venv
+        - source venv/Scripts/activate
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
     - name: "Python 3.7.6 on Windows"
       os: windows
@@ -86,7 +86,7 @@ matrix:
 before_script:
   - python -m pip install -r requirements.txt
 script:
-  - python bug890_with_main_guard.py        # run without coverage
-  - python bug890.py                        #
-  - coverage run bug890_with_main_guard.py  # run with coverage
-  - coverage run bug890.py                  #
+  - python bug890_with_main_guard.py
+  - python bug890.py
+  - coverage run bug890_with_main_guard.py
+  - coverage run bug890.py
