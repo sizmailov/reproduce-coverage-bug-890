@@ -26,4 +26,5 @@ jobs:
     - name: Run bug reproducer 
       run: |
         python bug890.py
+        coverage run bug890.py
         
