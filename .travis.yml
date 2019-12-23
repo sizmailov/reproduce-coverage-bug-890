@@ -88,5 +88,3 @@ before_script:
 script:
   - python bug890_with_main_guard.py
   - coverage run bug890_with_main_guard.py
-  - python bug890.py
-  - coverage run bug890.py
