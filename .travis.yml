@@ -4,33 +4,33 @@ sudo: false
 matrix:
   include:
     - name: "Python 2.7 on Linux"
-      - os: linux
-      - laguage: python
-      - python: 2.7
+      os: linux
+      laguage: python
+      python: 2.7
     - name: "Python 3.4 on Linux"
-      - os: linux
-      - laguage: python
-      - python: 3.4
+      os: linux
+      laguage: python
+      python: 3.4
     - name: "Python 3.5 on Linux"
-      - os: linux
-      - laguage: python
-      - python: 3.5
+      os: linux
+      laguage: python
+      python: 3.5
     - name: "Python 3.6 on Linux"
-      - os: linux
-      - laguage: python
-      - python: 3.6
+      os: linux
+      laguage: python
+      python: 3.6
     - name: "Python 3.7 on Linux"
-      - os: linux
-      - laguage: python
-      - python: 3.7
+      os: linux
+      laguage: python
+      python: 3.7
     - name: "Python 3.8 on Linux"
-      - os: linux
-      - laguage: python
-      - python: 3.8
+      os: linux
+      laguage: python
+      python: 3.8
     - name: "Python nightly on Linux"
-      - os: linux
-      - laguage: python
-      - python: nightly
+      os: linux
+      laguage: python
+      python: nightly
     - name: "Python 3.5.4 on Windows"
         os: windows
         language: shell
