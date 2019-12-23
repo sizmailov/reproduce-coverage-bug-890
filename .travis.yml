@@ -86,5 +86,7 @@ matrix:
 before_script:
   - python -m pip install -r requirements.txt
 script:
-  - python bug890.py        # run without coverage
-  - coverage run bug890.py  # run with coverage
+  - python bug890_with_main_guard.py        # run without coverage
+  - python bug890.py                        #
+  - coverage run bug890_with_main_guard.py  # run with coverage
+  - coverage run bug890.py                  #
